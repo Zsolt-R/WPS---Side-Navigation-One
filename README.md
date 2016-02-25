@@ -9,14 +9,10 @@ WPS Theme Component - Side Navigation One
 `require get_stylesheet_directory() . '/theme-modules/wps-menu-one/wps-module-sno-init.php';`
 
 
-2) Copy .scss component to SCSS project
-
-`_components.slideout.scss`
+2) Copy .scss component to SCSS project: `_components.slideout.scss`
 
 
-3) Import into style.scss
-
-`@import "project/components.slideout";`
+3) Import into style.scss:  `@import "project/components.slideout";`
 
 
 4) Extend default component:
