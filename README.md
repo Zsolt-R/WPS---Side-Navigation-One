@@ -35,9 +35,6 @@ WPS Theme Component - Side Navigation One
     float:left;
     }
 }`
-
-
-
-
+****
 
 ref: https://github.com/Mango/slideout
