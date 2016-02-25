@@ -15,9 +15,7 @@ WPS Theme Component - Side Navigation One
 3) Import into style.scss:  `@import "project/components.slideout";`
 
 
-4) Extend default component:
-
-`_components.page-head.scss`
+4) Extend default component: `_components.page-head.scss`
 
 `html,.site{
     background-color: $color-body;
