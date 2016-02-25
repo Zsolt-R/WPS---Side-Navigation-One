@@ -22,6 +22,7 @@ WPS Theme Component - Side Navigation One
 }`
 
 `// Adjust logo
+
 .brand-logo{
     @include media-query(palm){
     display: block;
