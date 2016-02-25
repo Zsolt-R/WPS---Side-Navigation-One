@@ -21,9 +21,9 @@ WPS Theme Component - Side Navigation One
     background-color: $color-body;
 }`
 
-`// Adjust logo
+`// Adjust logo`
 
-.brand-logo{
+`.brand-logo{
     @include media-query(palm){
     display: block;
     max-height:45px;
