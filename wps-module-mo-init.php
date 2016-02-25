@@ -13,9 +13,9 @@ define('MODULE_LOCATION_URI',get_stylesheet_directory_uri() . '/theme-modules/wp
 ****************************************/
 
 // Add child Scripts.
-add_action( 'wp_enqueue_scripts', 'add_module_sno_scripts', 20 );
+add_action( 'wp_enqueue_scripts', 'add_module_mo_scripts', 20 );
 
-function add_module_sno_scripts() {
+function add_module_mo_scripts() {
 
 	/* Slideout mobile navigation. - sidenav_one component */    
   wp_enqueue_script('site_slideout_js', MODULE_LOCATION_URI.'/assets/js/min/slideout.min.js', array('jquery'), '1.1.2', true );
@@ -42,12 +42,12 @@ require MODULE_LOCATION.'/inc/settings/child-front-layout-setup.php';
 
 
 /* Setup Module */
-add_action( 'after_setup_theme', 'module_sno_setup', 11);
+add_action( 'after_setup_theme', 'module_mo_setup', 11);
 
 /**
  * Module setup function
  */
-function module_sno_setup() {
+function module_mo_setup() {
 
   /**  
    * Add settings
