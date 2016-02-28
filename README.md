@@ -1,5 +1,5 @@
 # wps-menu-one
-WPS Theme Component - Side Navigation One
+WPS Theme Module - Side Navigation
 
 
 **Add module to your child theme**
@@ -9,13 +9,13 @@ WPS Theme Component - Side Navigation One
 `require get_stylesheet_directory() . '/theme-modules/wps-menu-one/wps-module-mo-init.php';`
 
 
-2) Copy .scss component from assets/sass/project to SCSS project: `_components.slideout.scss`
+2) Copy .scss component from assets/sass/project to SCSS project: `_components.main-nav-one.scss`
 
 
-3) Import into style.scss:  `@import "project/components.slideout";`
+3) Import into style.scss:  `@import "project/components.main-nav-one";`
 
 
-4) Extend default component: `_components.page-head.scss`
+4) Extend default component, copy the style from assets/sass/project/: `_components.page-head.scss`
 
 ```css
 html,.site{
