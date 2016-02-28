@@ -1,6 +1,7 @@
 /*------------------------------------*\
-    #SLIDEOUT MENU
+    #COMPONENTS MAIN NAV ONE
 \*------------------------------------*/
+
 .side-nav{
   display: none;
   background-color: $color-body;
@@ -83,20 +84,6 @@
 
 }
 
-.site-nav__toggler {
-  @include inuit-font-size(14px,1);
-  background-color: transparent;
-  border:1px solid $color-nav-link;
-  color:$color-nav-link;
-  outline: none;
-  display: block;
-  padding:halve($inuit-base-spacing-unit);
-  overflow: hidden;
-  white-space: nowrap;
-  border-radius: $brand-round;
-
-
-}
 .nav-icon{
   line-height:1em; // Optimize line height
 }

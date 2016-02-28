@@ -8,8 +8,16 @@
 define('MODULE_LOCATION',get_stylesheet_directory() . '/theme-modules/wps-menu-one');
 define('MODULE_LOCATION_URI',get_stylesheet_directory_uri() . '/theme-modules/wps-menu-one');
 
+
+// Deregister parent main navigation script.
+add_action( 'wp_enqueue_scripts', 'remove_theme_scripts', 100 );
+function remove_theme_scripts() {
+    // Deregister Parent theme Script.
+    wp_dequeue_script('main_menu_core');  
+}
+
 /***************************************
-    #ADD CHILD THEME SCRIPTS
+    #ADD MODULE SCRIPTS
 ****************************************/
 
 // Add child Scripts.
@@ -24,15 +32,8 @@ function add_module_mo_scripts() {
 
 /**
  * Sidenav Component
- *
- * Require these components early to allow correct pluggable function override
  */
 
-/*  Custom Menu Walker - sidenav_one component */
-require MODULE_LOCATION.'/inc/functions/wps-sidenav-one-menu-walker.php';
-
-/* Override partent theme main navigation - sidenav_one component */
-require MODULE_LOCATION.'/theme-components/objects/wps-sidenav-one-main-nav.php';
 
 /* Mobile Navigation and toggle button - sidenav_one component */
 require MODULE_LOCATION.'/theme-components/objects/wps-sidenav-one-mobile-nav.php';
@@ -54,7 +55,7 @@ function module_mo_setup() {
    */
 
   /* add toggle button - sidenav_one component */
-  add_action('layout_header__img','side_nav_toggle_button',0);
+  add_action('layout_header__body','side_nav_toggle_button',0);
 
   /* Theme NAV. add child theme nav (mobile). - sidenav_one component */
   add_action('body_start','child_theme_site_sidenav');
@@ -63,10 +64,11 @@ function module_mo_setup() {
    * Add  frontend class filters
    */
 
-  /* Main Navigation adjustments css */
-  add_filter('main_nav_class','theme_main_navigation_extra_class');
+  // Remove nav extra class
+  add_filter('main_nav_class','theme_main_nav_class_hide',11);
 
-  /* Header Layout Right css - sidenav_one component */
-  add_filter( 'header_layout_right_class', 'child_theme_header_layout_right' );
+  /* Header Layout Adjust */
+  add_filter( 'header_layout_right_class', 'adjust_layout_header_right' );
+  add_filter( 'header_layout_left_class', 'adjust_layout_header_left' );
 
 }

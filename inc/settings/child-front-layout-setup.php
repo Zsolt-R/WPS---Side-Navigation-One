@@ -7,10 +7,27 @@
 
 /**
  *
- * @param array $classes Holds all the main navigation classes in an array.
+ * @param array $classes Holds all the main header right area classes in an array.
 */
-function child_theme_header_layout_right( $classes ){
+function adjust_layout_header_left($classes){
 
-		$classes[] = 'palm--hide';
-		return $classes;
+	$classes[] = '2/3';
+	return $classes;
+}
+
+function adjust_layout_header_right($classes){
+
+	$classes[] = 'txt--right';
+	$classes[] = '1/3';
+	return $classes;
+}
+
+// Remove default nav class
+function theme_main_nav_class_hide($classes){
+
+
+  $classes[] = 'palm--hide';
+
+
+  return $classes;
 }
